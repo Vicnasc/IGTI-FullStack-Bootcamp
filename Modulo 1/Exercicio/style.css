@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
+  text-align: center;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+}
+
+#valueRed,
+#valueGreen,
+#valueBlue {
+  width: 50px;
+}
+
+#answer {
+  height: 150px;
+  width: 150px;
+  background: rgb(0, 0, 0);
+  margin-top: 20px;
+  position: relative;
+  left: 50%;
+}
