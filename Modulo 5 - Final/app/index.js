@@ -1,11 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import routes from './routes/routes.js';
-import path from 'path';
-import dotenv from 'dotenv';
-
-const __dirname = path.resolve();
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const routes = require('./routes/routes');
+const path = require('path');
+const dotenv = require('dotenv');
 
 /**
  * Faz a leitura do arquivo
@@ -14,7 +12,6 @@ const __dirname = path.resolve();
 dotenv.config();
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
@@ -42,8 +39,6 @@ app.use('/api/transaction', routes);
  * Conexão ao Banco de Dados
  */
 const { DB_CONNECTION } = process.env;
-
-let connectedToMongoDB;
 
 console.log('Iniciando conexão ao MongoDB...');
 mongoose.connect(
